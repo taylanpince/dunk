@@ -7,7 +7,7 @@ class ContestEntry(models.Model):
     """
     A contest entry with a unique email
     """
-    email = models.EmailField(_("Email"), max_length=255)
+    email = models.EmailField(_("Email"), max_length=255, unique=True)
     first_name = models.CharField(_("First Name"), max_length=255)
     last_name = models.CharField(_("Last Name"), max_length=255)
     address = models.CharField(_("Address Line 1"), max_length=255)
@@ -25,4 +25,8 @@ class ContestEntry(models.Model):
         verbose_name_plural = _("Contest Entries")
 
     def __unicode__(self):
-        return u"%(first_name)s %(last_name)s (%(email)s)" % self
+        return u"%(first_name)s %(last_name)s (%(email)s)" % {
+            "first_name": self.first_name,
+            "last_name": self.last_name,
+            "email": self.email,
+        }

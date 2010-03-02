@@ -14,6 +14,17 @@ class ContestEntryForm(forms.ModelForm):
     """
     email_confirm = forms.EmailField(label=_("Email Confirm"))
 
+    def clean_email(self):
+        if self.cleaned_data.get("email", None):
+            try:
+                ContestEntry.objects.get(email__iexact=self.cleaned_data.get("email"))
+            except ContestEntry.DoesNotExist:
+                return self.cleaned_data.get("email")
+
+            raise forms.ValidationError(_("A contest entry with this email has already been made."))
+
+        return self.cleaned_data.get("email", None)
+
     def clean(self):
         if self.cleaned_data.get("email") != self.cleaned_data.get("email_confirm"):
             raise forms.ValidationError(_("Please make sure that your email is entered correctly."))
