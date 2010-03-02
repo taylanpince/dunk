@@ -3,6 +3,7 @@ from django.conf.urls.defaults import *
 
 urlpatterns = patterns('contest.views',
     url(r"^$", "entry", name="contest_entry"),
+    url(r"^rules/$", "rules", name="contest_rules"),
 )
 
 urlpatterns += patterns('',

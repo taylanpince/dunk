@@ -9,6 +9,7 @@
 			{{ field }}
 		</li>
 		{% endfor %}
-		<li class="right"><input type="image" src="{{ MEDIA_URL }}images/btn-enter.png" value="ENTER" /></li>
+		<li class="padded"><a href="{% url contest_rules %}" id="ContestRulesLink">Click here for contest rules</a></li>
+		<li class="padded"><input type="image" src="{{ MEDIA_URL }}images/btn-enter.png" value="ENTER" /></li>
 	</ul>
 </form>

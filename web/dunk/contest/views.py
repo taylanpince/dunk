@@ -22,3 +22,17 @@ def entry(request):
     return render_to_response("contest/entry.html", {
         "form": form,
     }, context_instance=RequestContext(request))
+
+
+def rules(request):
+    """
+    Renders the contest rules page
+    """
+    if request.is_ajax():
+        return render_to_response("contest/rules_content.html", {
+            
+        }, context_instance=RequestContext(request))
+    else:
+        return render_to_response("contest/rules.html", {
+            
+        }, context_instance=RequestContext(request))

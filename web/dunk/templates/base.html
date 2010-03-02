@@ -23,7 +23,12 @@
 		
 		<a href="/"><img src="{{ MEDIA_URL }}images/header.png" alt="The definitive movie about the DUNK. Now in production." /></a>
 		
-		{% block content %}{% endblock %}
+		<div id="Content">
+			{% block content %}
+			<div id="LeftColumn" class="{% block left_column_class %}contest{% endblock %}">{% block left_column %}{% endblock %}</div>
+			<div id="RightColumn" class="{% block right_column_class %}{% endblock %}">{% block right_column %}{% endblock %}</div>
+			{% endblock %}
+		</div>
 		
 	</div>
 
