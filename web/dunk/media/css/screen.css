@@ -1,0 +1,234 @@
+/*
+ *	Title: Screen CSS Styles for dunkthemovie.com
+ *	Date: March 2nd, 2010
+ *  Author: Taylan Pince (taylanpince at gmail dot com)
+ */
+
+
+/* @group Global */
+
+body {
+    font: 12px Helvetica, Arial, sans-serif;
+    background: #000 url("../images/bg-page.png") top left repeat-x;
+    color: #fff;
+    line-height: 20px;
+}
+
+/* @end */
+
+
+/* @group Headers */
+
+h1 {
+    font: 50px Helvetica, Arial, sans-serif;
+    color: #919191;
+    padding: 0px 0px 12px 0px;
+    border-bottom: 1px solid #2a2a2a;
+    margin: 0px 0px 25px 0px;
+}
+
+h2 {
+    font: 20px Georgia, "Times New Roman", Times, serif;
+    color: #eee;
+    line-height: 22px;
+    margin: 0px 0px 20px 0px;
+}
+
+h3 {
+    font: 20px Georgia, "Times New Roman", Times, serif;
+    color: #eee;
+    margin: 0px 0px 10px 0px;
+}
+
+h4 {
+    font: 18px Georgia, "Times New Roman", Times, serif;
+    color: #32331d;
+    margin: 0px 0px 6px 0px;
+}
+
+h5 {
+    font: 13px Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    color: #363636;
+    margin: 0px 0px 6px 0px;
+}
+
+/* @end */
+
+
+/* @group Text */
+
+p {
+	line-height: 21px;
+	margin: 0px 0px 20px 0px;
+}
+
+hr {
+	border: none;
+	margin: 0px 0px 20px 0px;
+	border-top: 1px solid #2a2a2a;
+	background-color: transparent;
+}
+
+div.hr {
+    margin: 0px 0px 20px 0px;
+    padding: 30px 0px 0px 0px;
+    background: transparent url("../images/bg-hr.png") 50% 50% no-repeat;
+}
+
+div.hr hr {
+    display: none;
+}
+
+/* @end */
+
+
+/* @group Links */
+
+a,
+a:link,
+a:active,
+a:visited {
+    color: #c36214;
+	text-decoration: none;
+	padding: 0px 0px 2px 0px;
+}
+
+a:visited {
+    color: #c3824d;
+}
+
+a:hover {
+	color: #c3824d;
+}
+
+/* @end */
+
+
+/* @group Lists */
+
+ul,
+ol {
+    margin: 0px 0px 20px 0px;
+}
+
+ul.bullets li,
+li {
+	margin: 0px 0px 10px 30px;
+}
+
+ol li {
+    list-style-type: decimal;
+}
+
+ul li,
+ul.bullets li {
+    list-style-type: square;
+}
+
+/* @end */
+
+
+/* @group Forms */
+
+form {
+	
+}
+
+label {
+	
+}
+
+/*input.text,
+select,
+textarea {
+    font: 14px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
+	border: 4px solid #2a2a2a;
+	background-color: #101010;
+	padding: 4px;
+	margin: 0px;
+	color: #FFF;
+}*/
+
+input:focus,
+textarea:focus {
+	color: #333;
+    background-color: #eee;
+}
+
+form li {
+    overflow: hidden;
+    position: static;
+    width: 870px;
+    margin: 0px 0px 10px 0px;
+    list-style-type: none;
+}
+
+form li label {
+    float: left;
+    display: inline;
+    width: 100px;
+    margin: 0px 10px 0px 0px;
+    font-weight: bold;
+    padding: 5px 0px 0px 0px;
+}
+
+form li input.text,
+form li select,
+form li textarea {
+    float: left;
+    display: inline;
+}
+
+form li input.text,
+form li textarea {
+    width: 400px;
+}
+
+form li textarea {
+    height: 200px;
+}
+
+form li p.help {
+    clear: both;
+    padding: 4px 0px 0px 110px;
+    margin: 0px;
+    font-size: 11px;
+}
+
+form li.padded {
+    padding: 0px 0px 0px 110px;
+}
+
+form li.checkbox label {
+    width: 380px;
+    padding-top: 0px;
+    font-weight: normal;
+}
+
+form li.checkbox input {
+    float: left;
+    display: inline;
+    margin: 3px 8px 0px 0px;
+}
+
+form li p.error {
+    width: 362px;
+    margin: 0px 0px 4px 110px;
+}
+
+form li.right {
+    text-align: right;
+}
+
+/* @end */
+
+
+/* @group Content */
+
+#Container {
+    width: 942px;
+    margin: 0px auto 0px auto;
+}
+
+/* @end */

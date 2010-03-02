@@ -10,11 +10,22 @@
 	
 	<link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.ico" />
 	
+	<style type="text/css" media="all">
+		@import url("{{ MEDIA_URL }}css/reset.css");
+		@import url("{{ MEDIA_URL }}css/screen.css");
+	</style>
+	
 </head>
 
 <body id="top" class="{% block class %}{% endblock %}">
-
-	{% block content %}{% endblock %}
+	
+	<div id="Container">
+		
+		<a href="/"><img src="{{ MEDIA_URL }}images/header.png" alt="The definitive movie about the DUNK. Now in production." /></a>
+		
+		{% block content %}{% endblock %}
+		
+	</div>
 
 </body>
 </html>

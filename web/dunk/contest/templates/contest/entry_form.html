@@ -1,4 +1,14 @@
+{% if form.non_field_errors %}<p class="error">{{ form.non_field_errors|join:", " }}</p>{% endif %}
+
 <form method="post" action="{% url contest_entry %}">
-{{ form.as_p }}
-<input type="submit" value="ENTER" />
+	<ul>
+		{% for field in form %}
+		<li>
+			{% if field.errors %}<p class="error">{{ field.errors|join:", " }}</p>{% endif %}
+			{{ field.label_tag }}
+			{{ field }}
+		</li>
+		{% endfor %}
+		<li class="right"><input type="image" src="{{ MEDIA_URL }}images/btn-enter.png" value="ENTER" /></li>
+	</ul>
 </form>
