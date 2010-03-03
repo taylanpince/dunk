@@ -1,5 +1,3 @@
-from __future__ import with_statement
-
 from fabric.api import *
 from fabric.contrib.console import confirm
 
@@ -35,7 +33,9 @@ def restart():
     """
     Restart Apache process
     """
-    run('touch %s/conf/django.wsgi' % env.project_dir)
+    sudo('/etc/init.d/apache2 stop')
+    sudo('/etc/init.d/apache2 start')
+    sudo('/etc/init.d/nginx restart')
 
 def update_pip():
     """
