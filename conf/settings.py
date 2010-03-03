@@ -15,4 +15,4 @@ DATABASE_USER = 'dunkdbu'
 DATABASE_PASSWORD = '1Mn35MSVS3'
 DATABASE_HOST = '127.0.0.1'
 
-MEDIA_URL = 'http://media.dunkthemovie.com/'
+MEDIA_URL = 'http://static.dunkthemovie.com/'
