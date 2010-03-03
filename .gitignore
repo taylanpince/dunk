@@ -1,1 +1,3 @@
 web/dunk/media/admin
+web/dunk/media/files
+web/dunk/settings_local.py
