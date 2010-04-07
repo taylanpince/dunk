@@ -14,6 +14,8 @@
 		@import url("{{ MEDIA_URL }}css/reset.css");
 		@import url("{{ MEDIA_URL }}css/screen.css");
 	</style>
+
+	<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.min.js"></script>
 	
 </head>
 
@@ -21,7 +23,7 @@
 	
 	<div id="Container">
 		
-		<a href="/"><img src="{{ MEDIA_URL }}images/header.png" alt="The definitive movie about the DUNK. Now in production." /></a>
+		<a href="/" id="Header"><img src="{{ MEDIA_URL }}images/header.png" alt="The definitive movie about the DUNK. Now in production." /></a>
 		
 		<div id="Content">
 			{% block content %}
@@ -31,6 +33,29 @@
 		</div>
 		
 	</div>
+	
+	<ul id="ShareLinks">
+		<li>SHARE:</li>
+		<li><a href="#"><img src="{{ MEDIA_URL }}images/btn-youtube.png" alt="Share on YouTube" /></a></li>
+		<li><a href="#"><img src="{{ MEDIA_URL }}images/btn-facebook.png" alt="Share on Facebook" /></a></li>
+		<li><a href="#"><img src="{{ MEDIA_URL }}images/btn-twitter.png" alt="Share on twitter" /></a></li>
+		<li><a href="#"><img src="{{ MEDIA_URL }}images/btn-digg.png" alt="Share on digg" /></a></li>
+		<li><a href="#"><img src="{{ MEDIA_URL }}images/btn-delicious.png" alt="Share on delicious" /></a></li>
+	</ul>
+	
+	<script type="text/javascript" charset="utf-8">
+	//<![CDATA[
+		$("#ShareLinks img").hover(function() {
+			$(this).stop().animate({
+				"opacity": 1.0
+			});
+		}, function() {
+			$(this).stop().animate({
+				"opacity": 0.5
+			});
+		});
+	//]]>
+	</script>
 
 </body>
 </html>

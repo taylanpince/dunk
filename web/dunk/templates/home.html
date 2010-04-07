@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 
-{% load contest_tags %}
 
+{% block class %}home{% endblock %}
 
-{% block left_column %}
-<object width="560" height="340"><param name="movie" value="http://www.youtube-nocookie.com/v/8C6B6rGY73E&hl=en_US&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube-nocookie.com/v/8C6B6rGY73E&hl=en_US&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>
-{% endblock %}
+{% block content %}
 
-{% block right_column_class %}contest{% endblock %}
-{% block right_column %}
-{% contest_entry_form %}
+<p><img src="{{ MEDIA_URL }}images/title-in-production.png" alt="Now In Production" /></p>
+
+<object width="560" height="340" id="Trailer"><param name="movie" value="http://www.youtube-nocookie.com/v/5ZWpeBrT49U&hl=en_US&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube-nocookie.com/v/5ZWpeBrT49U&hl=en_US&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>
+
+<p class="low-margin"><a href="{% url contest_entry %}"><img src="{{ MEDIA_URL }}images/title-register.png" alt="Register to Win a 2011 All-Star Weekend in Los Angeles" /></a></p>
+
+<p><a href="{% url contest_entry %}"><img src="{{ MEDIA_URL }}images/btn-enter.png" alt="Enter" /></a></p>
+
 {% endblock %}

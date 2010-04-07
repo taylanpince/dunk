@@ -1,5 +1,9 @@
-{% extends "home.html" %}
+{% extends "base.html" %}
 
-{% block right_column %}
+
+{% block class %}home{% endblock %}
+
+{% block content %}
+<p class="low-margin"><img src="{{ MEDIA_URL }}images/title-register.png" alt="Register to Win a 2011 All-Star Weekend in Los Angeles" /></p>
 {% include "contest/entry_form.html" %}
 {% endblock %}
