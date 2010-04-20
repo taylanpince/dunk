@@ -2,6 +2,8 @@ from django.contrib.localflavor.us.models import PhoneNumberField, USStateField
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from contest.choices import PROVINCE_CHOICES
+
 
 class ContestEntry(models.Model):
     """
@@ -13,8 +15,8 @@ class ContestEntry(models.Model):
     address = models.CharField(_("Address Line 1"), max_length=255)
     address_second = models.CharField(_("Address Line 2"), blank=True, max_length=255)
     city = models.CharField(_("City"), max_length=255)
-    zip_code = models.CharField(_("Zip Code"), max_length=10)
-    state = USStateField(_("State"))
+    zip_code = models.CharField(_("Zip/Postal Code"), max_length=10)
+    state = models.CharField(_("State/Province"), choices=PROVINCE_CHOICES, max_length=2)
     phone_number = PhoneNumberField(_("Phone Number"))
     birth_date = models.DateField(_("Birthday"))
 

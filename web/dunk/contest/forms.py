@@ -35,11 +35,11 @@ class ContestEntryForm(forms.ModelForm):
         super(ContestEntryForm, self).__init__(*args, **kwargs)
 
         now = date.today()
-        years = range(now.year - 100, now.year - 18)
+        years = range(now.year - 100, now.year - 17)
         years.reverse()
 
         self.fields["birth_date"].widget = SelectDateWidget(years=years)
-        self.fields["state"].widget = USStateSelect()
+        #self.fields["state"].widget = USStateSelect()
         self.fields.keyOrder.insert(1, self.fields.keyOrder.pop())
 
     class Meta:

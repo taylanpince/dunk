@@ -3,6 +3,9 @@ import os
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
+SERVER_EMAIL = 'errors@dunkthemovie.com'
+DEFAULT_FROM_EMAIL = 'no-reply@dunkthemovie.com'
+
 ADMINS = (
     ('Taylan Pince', 'taylanpince@gmail.com'),
 )
